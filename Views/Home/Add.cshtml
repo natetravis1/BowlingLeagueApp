@@ -1,0 +1,57 @@
+﻿@{
+}
+
+@model Bowler
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <form method="post" asp-action="Add">
+        <div>
+            <label asp-for="BowlerFirstName">First Name: </label>
+            <input asp-for="BowlerFirstName" type="text" />
+        </div>
+
+        <div>
+            <label asp-for="BowlerMiddleInit">Middle Initial: </label>
+            <input asp-for="BowlerMiddleInit" type="text" />
+        </div>
+
+        <div>
+            <label asp-for="BowlerLastName">Last Name: </label>
+            <input asp-for="BowlerLastName" type="text" />
+        </div>
+
+        <div>
+            <label asp-for="BowlerAddress">Address: </label>
+            <input asp-for="BowlerAddress" type="text" />
+        </div>
+
+        <div>
+            <label asp-for="BowlerCity">City: </label>
+            <input asp-for="BowlerCity" type="text" />
+        </div>
+
+        <div>
+            <label asp-for="BowlerState" maxlength="2">State: </label>
+            <input asp-for="BowlerState" type="text" />
+        </div>
+
+        <div>
+            <label asp-for="BowlerZip">Zip: </label>
+            <input asp-for="BowlerZip" type="text" />
+        </div>
+
+        <div>
+            <label asp-for="BowlerPhoneNumber">Phone Number: </label>
+            <input asp-for="BowlerPhoneNumber" type="tel" />
+        </div>
+
+        <div>
+            <label asp-for="TeamID">Team: </label>
+            <input asp-for="TeamID" type="number" />
+        </div>
+
+        <button class="btn-primary" type="submit">Add</button>
+    </form>
+</div>

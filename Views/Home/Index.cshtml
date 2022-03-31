@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<Bowler>
+
+<h1>Bowlers</h1>
+
+<br />
+
+<div id="teams" class="col-3">
+    @*<vc:teams></vc:teams>*@
+</div>
+
+<table class="table table-sm table-striped table-bordered">
+
+    <thead>
+        <tr>
+            <th>Bowler ID</th>
+            <th>First Name</th>
+            <th>Middle Initial</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var b in Model)
+        {
+            <partial name="BowlerSummary" model="b" />
+        }
+    </tbody>
+
+</table>
+
+<a class=" btn btn-primary" asp-action="Add">Add a Bowler</a>
