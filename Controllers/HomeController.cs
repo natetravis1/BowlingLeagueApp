@@ -54,8 +54,9 @@ namespace BowlingLeagueApp.Controllers
         public IActionResult Edit(Bowler b)
         {
             _repo.UpdateBowler(b);
+            _repo.SaveBowler(b);
 
-            return RedirectToAction("Movies");
+            return RedirectToAction("Index");
         }
 
         [HttpGet]

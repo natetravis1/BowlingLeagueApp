@@ -8,6 +8,11 @@
 <div class="text-center">
     <form method="post" asp-action="Add">
         <div>
+            <label asp-for="BowlerID">Bowler ID: </label>
+            <input asp-for="BowlerID" type="number" />
+        </div>
+
+        <div>
             <label asp-for="BowlerFirstName">First Name: </label>
             <input asp-for="BowlerFirstName" type="text" />
         </div>
